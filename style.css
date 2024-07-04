@@ -1,0 +1,323 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, rgba(95, 40, 144, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('imagenes/2.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer .social-icons {
+    margin-top: 1em;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #ffdd57;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    text-align: justify; /* Alineación central del texto */
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+    }
+    .profile-image {
+        margin-bottom: 1em; /* Añade espacio entre la imagen y el texto en pantallas pequeñas */
+    }
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto; /* Para mantener la proporción */
+    max-width: 100%; /* Para asegurar que la imagen no se desborde del contenedor */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2em;
+}
+
+/*  media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+        text-align: center; /* Centra el texto cuando está en una columna */
+    }
+    .profile-image {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 1em; /* Agrega espacio entre la imagen y el texto en pantallas pequeñas */
+    }
+}
+
+
+
+.maintenance-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: rgb(233, 17, 17);
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.maintenance-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 4em 2em; /* Incrementar padding para hacer el recuadro más grande */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    width: 100%; /* Asegurar que ocupe más espacio */
+    margin: auto;
+}
+
+.gear-animation {
+    width: 150px; /* Incrementar tamaño del ícono */
+    margin: 2em auto; /* Añadir margen para centrar */
+}
+
+.gear-animation img {
+    width: 100%;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .maintenance-content {
+        padding: 2em 1em; /* Ajustar padding para pantallas pequeñas */
+    }
+    
+    .gear-animation {
+        width: 100px; /* Ajustar tamaño del ícono para pantallas pequeñas */
+    }
+}
+.profile-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.profile-image img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+.profile-description {
+    max-width: 500px;
+    text-align: left;
+    color: white;
+}
+
+.skills-container {
+    padding: 4em 2em;
+    text-align: center;
+    color: white;
+}
+
+.skills-container h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-icons i {
+    font-size: 3em;
+    margin: 0.5em 1em;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.skills-icons i:hover {
+    transform: scale(1.2);
+    color: #ffdd57;
+}
+
+.skills-icons img {
+    width: 3em;
+    height: 3em;
+    margin: 0.5em 1em;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.profile-description {
+    text-align: justify;
+}
+
+.project {
+    border: 1px solid #ccc;
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 800px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1em;
+}
+
+.project button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
